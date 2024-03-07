@@ -109,3 +109,23 @@ function openLightbox5() {
   function closeLightbox5() {
   document.getElementById("kat").style.display = "none"
 }
+
+
+function getRandomNumber(){
+  return Math.floor(Math.random() * 10)+1;
+}
+
+async function getWeather(){
+  const response = await axios.get("https://65ddd3abdccfcd562f558d61.mockapi.io/api/v1/forecast/" + getRandomNumber())
+  return response.data;
+}
+
+async function writeWeatherToHTML(){
+  const weather = await getWeather();
+  console.log(weather)
+  document.getElementById("weather-data-sky").textContent = weather.sky + ".";
+  document.getElementById("weather-data-temperature").textContent = weather.temperature + " grader.";
+  document.getElementById("weather-data-rain").textContent = weather.rain_mm + "mm regn.";
+}
+
+writeWeatherToHTML()

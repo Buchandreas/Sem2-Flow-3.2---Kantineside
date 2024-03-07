@@ -292,6 +292,18 @@ transition: all 0.3s ease;
   width: 100%;
 }
 
+/* --------------------------------- WEATHER DATA STYLING --------------------------------- */
+.weather{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container-weather{
+  display: flex;
+  justify-content: center;
+}
+
 
 @media screen and (max-width: 780px) {
   .container {
