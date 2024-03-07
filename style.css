@@ -6,7 +6,6 @@
 }
 
 body{
-    background: azure;
     color: #000000;
 }
 /* Nav bar stylings */
@@ -35,9 +34,44 @@ nav ul li a{
 
 .icon{
     margin-left: 40px;
+    color: #000000;
 }
 
 /* Section 1 */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container img {
+width: 200px;
+margin: 10px;
+}
+
+.filter{
+margin-top: 20px;
+padding: 20px;
+width: 100%;
+text-align: center;
+margin-bottom: 40px;
+}
+
+.filter-item{
+color: #2c2c2c;
+font-size: 17px;
+border: 2px solid #2c2c2c;
+text-transform: uppercase;
+display: inline-block;
+border-radius: 20px;
+margin-right: 8px;
+margin-bottom: 10px;
+cursor: pointer;
+padding: 8px 20px 8px 20px;
+line-height: 1.2;
+transition: all 0.3s ease;
+}
 
 .container-flex{
     grid-row: auto;
@@ -151,19 +185,23 @@ nav ul li a{
   bottom: 30px;
   left: 70px;
   max-width: 40%;
+  max-height: 75%;
   text-align: center;
   border-radius: 10px;
 }
 
 .text h1 {
+    font-size: 2rem;
     padding-bottom: 20px;
 }
 
 .text h2 {
+   font-size: 1.5rem;
     padding-bottom: 5px;
 }
 
 .text p {
+    font-style: 1rem;
     font-size: 20px;
 }
 
@@ -203,4 +241,97 @@ nav ul li a{
 @keyframes fade {
   from {opacity: 0}
   to {opacity: 1}
+}
+
+.lightbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portrait {
+  width: 200px;
+}
+
+.portrait--big {
+  height: 80%;
+  border-radius: 10px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.49);
+  bottom: 50px;
+}
+
+.modal img{
+
+}
+
+.modal--content {
+  height: 80%;
+  width: 80%;
+  max-width: 80%;
+  background-color: white;
+  border-radius: 10px;  
+  display: flex;
+}
+
+
+.modal--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+
+@media screen and (max-width: 780px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul {
+    display: none; /* Hide navigation links on smaller screens */
+}
+
+.text h1 {
+font-size: 22px;
+}
+.text h2{
+  font-size: 18px;
+}
+
+.text p {
+display: none;  
+}
+  
+  .modal--content img{
+    max-width: 200px;
+    max-height: 200px;
+  }
+    
+  .modal--content{
+     display: block; 
+     max-width: 200px;
+     overflow: scroll;
+      }
+
+  .modal--container{
+    height: 50%;
+    }
+  .modal{
+    top: 0;
+  }
+/* hvAD SKUBBER VORES LIGHTBOX SÅ LANGT NED? */
+
+
 }

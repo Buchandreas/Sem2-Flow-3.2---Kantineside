@@ -11,11 +11,11 @@
     <div id="header">
         <div class="container">
             <nav>
-                <p class="icon"><i class="fa-solid fa-utensils fa-2x"></i></p>
+                <a href="/index.html" class="icon"><i class="fa-solid fa-utensils fa-2x"></i></a>
                 <ul>
                     <li><a href="#faste-varer">Faste varer</a></li>
                     <li><a href="#vejr-oversigt">Vejr-oversigt</a></li>
-                    <li><a href="#kontakt">Kontakt</a></li>
+                    <li><a href="/contact.html">Kontakt</a></li>
                 </ul>
             </nav>
         </div>
@@ -72,33 +72,110 @@
         <span class="dot" onclick="currentSlide(3)"></span> 
     </div>
 
+
+    <div class="filter">
+        <span class="filter-item" onclick="showAll()">Alt</span>
+        <span class="filter-item" onclick="Morgenmad()">Morgenmad</span>
+        <span class="filter-item" onclick="Frokost()">Frokost</span>
+        <span class="filter-item" onclick="Drikkevare()">Drikkevare</span>
+        <span class="filter-item" onclick="Snacks()">Snacks</span>
+      </div>
+      
     <!-- Section 1 (Faste varer) -->
     <div class="section-1" id="faste-varer">
         <h1>Faste varer</h1>
     </div>
 
-    <div class="grid-container">
-        <div class="product">
-            <img src="images/cola.png" alt="Product 2">
+    <div class="grid-container" id="pictureContainer">
+    <div class="product picture Drikkevare" >
+            <img src="images/cola.png" alt="Drikkevare" onclick="openLightbox()">
             <h2>Coca Cola 0,5L</h2>
             <p>22 DKK</p>
           </div>
-        <div class="product">
-          <img src="images/cola.png" alt="Product 2">
-          <h2>Coca Cola 0,5L</h2>
+        <div class="product picture Morgenmad">
+          <img src="images/img/croissant.png" alt="Morgenmad" onclick="openLightbox1()" >
+          <h2>Croissant</h2>
           <p>22 DKK</p>
         </div>
-        <div class="product">
-            <img src="images/cola.png" alt="Product 2">
-            <h2>Coca Cola 0,5L</h2>
+        <div class="product picture Frokost">
+            <img src="images/img/sandwich.png" alt="Sandwich" onclick="openLightbox2()">
+            <h2>Sandwich</h2>
             <p>22 DKK</p>
         </div>
-        <div class="product">
-            <img src="images/cola.png" alt="Product 2">
-            <h2>Coca Cola 0,5L</h2>
+        <div class="product picture Snacks">
+            <img src="images/img/kanelsnegl.png" alt="Snacks" onclick="openLightbox3()">
+            <h2>Kanelsnegl</h2>
+            <p>22 DKK</p>
+        </div>
+        <div class="product picture Snacks">
+            <img src="images/img/apple.png" alt="Snacks"onclick="openLightbox4()">
+            <h2>Frugt</h2>
+            <p>22 DKK</p>
+        </div>
+        <div class="product picture Morgenmad">
+            <img src="images/img/cute-cat.png" alt="Morgenmad" onclick="openLightbox5()">
+            <h2>Kat</h2>
             <p>22 DKK</p>
         </div>
 
+
+
+     
+            <!-- store lightbox billeder herunder -->
+                       
+          <div id="myModal" class="modal" onclick="closeLightbox()">
+            <div class="modal--container">
+              <div class="modal--content">
+                <img src="images/cola.png" class="portrait--big" id="bigImage" />
+                <p>her er en beskrivelse <br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus, fuga sunt eveniet dolor nulla eius quas incidunt ut voluptate similique reprehenderit quaerat quis. Repudiandae, soluta iste nisi amet rem voluptatem maxime dignissimos eligendi assumenda ab fuga, dolor nulla! Fugiat nulla officiis repudiandae vero aperiam laudantium, assumenda eos sequi facere delectus!</p>
+              </div>
+            </div>
+          </div>
+    
+          <div id="croissant" class="modal" onclick="closeLightbox1()">
+            <div class="modal--container">
+              <div class="modal--content">  
+                <img src="images/img/croissant.png" class="portrait--big" />
+                <p>her er en beskrivelse <br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus, fuga sunt eveniet dolor nulla eius quas incidunt ut voluptate similique reprehenderit quaerat quis. Repudiandae, soluta iste nisi amet rem voluptatem maxime dignissimos eligendi assumenda ab fuga, dolor nulla! Fugiat nulla officiis repudiandae vero aperiam laudantium, assumenda eos sequi facere delectus!</p>
+              </div>
+            </div>
+          </div>
+    
+          <div id="sandwich" class="modal" onclick="closeLightbox2()">
+            <div class="modal--container">
+              <div class="modal--content">  
+                <img src="images/img/sandwich.png" class="portrait--big" />
+                <p>her er en beskrivelse <br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus, fuga sunt eveniet dolor nulla eius quas incidunt ut voluptate similique reprehenderit quaerat quis. Repudiandae, soluta iste nisi amet rem voluptatem maxime dignissimos eligendi assumenda ab fuga, dolor nulla! Fugiat nulla officiis repudiandae vero aperiam laudantium, assumenda eos sequi facere delectus!</p>
+              </div>
+            </div>
+          </div>
+          
+          <div id="kanelsnegl" class="modal" onclick="closeLightbox3()">
+            <div class="modal--container">
+              <div class="modal--content">  
+                <img src="images/img/kanelsnegl.png" class="portrait--big" />
+                <p>her er en beskrivelse <br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus, fuga sunt eveniet dolor nulla eius quas incidunt ut voluptate similique reprehenderit quaerat quis. Repudiandae, soluta iste nisi amet rem voluptatem maxime dignissimos eligendi assumenda ab fuga, dolor nulla! Fugiat nulla officiis repudiandae vero aperiam laudantium, assumenda eos sequi facere delectus!</p>
+              </div>
+            </div>
+          </div>
+          <div id="apple" class="modal" onclick="closeLightbox4()">
+            <div class="modal--container">
+                <div class="modal--content">  
+                    <img src="images/img/apple.png" class="portrait--big" />
+                    <p>her er en beskrivelse <br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus, fuga sunt eveniet dolor nulla eius quas incidunt ut voluptate similique reprehenderit quaerat quis. Repudiandae, soluta iste nisi amet rem voluptatem maxime dignissimos eligendi assumenda ab fuga, dolor nulla! Fugiat nulla officiis repudiandae vero aperiam laudantium, assumenda eos sequi facere delectus!</p>
+                </div>
+            </div>
+        </div>
+        
+          <div id="kat" class="modal" onclick="closeLightbox5()">
+            <div class="modal--container">
+                <div class="modal--content">  
+                    <img src="images/img/cute-cat.png" class="portrait--big" />
+                    <p>her er en beskrivelse <br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus, fuga sunt eveniet dolor nulla eius quas incidunt ut voluptate similique reprehenderit quaerat quis. Repudiandae, soluta iste nisi amet rem voluptatem maxime dignissimos eligendi assumenda ab fuga, dolor nulla! Fugiat nulla officiis repudiandae vero aperiam laudantium, assumenda eos sequi facere delectus!</p>
+                </div>
+            </div>
+        </div>
+        
 
     <!-- Javascript import statement -->
     <script src="script.js"></script>
